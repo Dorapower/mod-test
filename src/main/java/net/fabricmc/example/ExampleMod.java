@@ -23,6 +23,6 @@ public class ExampleMod implements ModInitializer {
         // Proceed with mild caution.
 
         LOGGER.info("Hello Fabric world!");
-        Registry.register(Registry.ITEM, new Identifier("test-mod", "test_wand"), test_wand);
+        Registry.register(Registry.ITEM, new Identifier("test_mod", "test_wand"), test_wand);
     }
 }
