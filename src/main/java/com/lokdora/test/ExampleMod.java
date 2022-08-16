@@ -1,5 +1,6 @@
-package net.fabricmc.example;
+package com.lokdora.test;
 
+import com.lokdora.test.item.WandItem;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
@@ -14,7 +15,7 @@ public class ExampleMod implements ModInitializer {
     // It is considered best practice to use your mod id as the logger's name.
     // That way, it's clear which mod wrote info, warnings, and errors.
     public static final Logger LOGGER = LoggerFactory.getLogger("test-mod");
-    public static final Item test_wand = new Item(new FabricItemSettings().group(ItemGroup.TRANSPORTATION));
+    public static final Item test_wand = new WandItem(new FabricItemSettings().group(ItemGroup.TRANSPORTATION));
 
     @Override
     public void onInitialize() {

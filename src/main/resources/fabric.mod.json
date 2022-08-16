@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "test-mod",
+  "id": "test_mod",
   "version": "${version}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Mod Test",
+  "description": "Test fabric modding",
   "authors": [
     "Lokdora"
   ],
@@ -12,15 +12,15 @@
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/test_mod/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.lokdora.test.ExampleMod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "test_mod.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.13.3",
