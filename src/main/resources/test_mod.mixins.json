@@ -4,6 +4,7 @@
   "package": "com.lokdora.test.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "MinecraftClientAccessor"
   ],
   "client": [
     "ExampleMixin"

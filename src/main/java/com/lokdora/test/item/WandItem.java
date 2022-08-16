@@ -1,5 +1,7 @@
 package com.lokdora.test.item;
 
+import com.lokdora.test.mixin.MinecraftClientAccessor;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
@@ -19,6 +21,7 @@ public class WandItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
         playerEntity.playSound(SoundEvents.ENTITY_ARROW_HIT_PLAYER, 1.0f, 1.0f);
         playerEntity.addStatusEffect(new StatusEffectInstance(StatusEffect.byRawId(1), 1000));
+        ((MinecraftClientAccessor) MinecraftClient.getInstance()).setItemUseCooldown(100);
 
         return TypedActionResult.success(playerEntity.getStackInHand(hand));
     }
